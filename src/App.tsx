@@ -4,10 +4,8 @@ import React from "react";
 
 import useScript from "./use-script";
 
-// TODO(developer): Set to client ID and API key from the Google Developer Console
-const CLIENT_ID =
-  REPLACE_CLIENT_ID; // OAuth 2.0 Client IDs TractorClient
-const API_KEY = REPLACE_API_KEY; // TractorAPIKEY
+let CLIENT_ID = window.localStorage.getItem("CLIENT_ID") || "setme";
+let API_KEY = window.localStorage.getItem("API_KEY") || "setme";
 
 // Discovery doc URL for APIs used by the quickstart
 const DISCOVERY_DOC = "https://docs.googleapis.com/$discovery/rest?version=v1";
